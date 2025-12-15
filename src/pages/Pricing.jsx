@@ -19,7 +19,8 @@ const Pricing = () => {
 
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
                         >
                             <h3 className="text-2xl font-serif font-bold text-white mb-6">How We Determine Cost</h3>
@@ -67,7 +68,8 @@ const Pricing = () => {
 
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
                             className="bg-primary-light p-8 rounded-xl border border-white/5 relative overflow-hidden"
                         >
