@@ -20,7 +20,7 @@ const Contact = () => {
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
                         >
                             <h3 className="text-2xl font-serif font-bold text-white mb-8">Get in Touch</h3>
@@ -78,31 +78,31 @@ const Contact = () => {
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
                             className="bg-primary-light p-8 rounded-xl border border-white/5"
                         >
-                            <h3 className="text-2xl font-serif font-bold text-white mb-6">Send a Message</h3>
-                            <form className="space-y-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <h3 className="text-2xl font-serif font-bold text-white mb-4">Send a Message</h3>
+                            <form className="space-y-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-text-muted mb-2">Name</label>
-                                        <input type="text" className="w-full bg-primary-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="Your Name" />
+                                        <label className="block text-xs font-medium text-text-muted mb-1">Name</label>
+                                        <input type="text" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Name" />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-text-muted mb-2">Phone</label>
-                                        <input type="tel" className="w-full bg-primary-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="Your Phone" />
+                                        <label className="block text-xs font-medium text-text-muted mb-1">Phone</label>
+                                        <input type="tel" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Phone" />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-text-muted mb-2">Email</label>
-                                    <input type="email" className="w-full bg-primary-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="Your Email" />
+                                    <label className="block text-xs font-medium text-text-muted mb-1">Email</label>
+                                    <input type="email" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Email" />
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-text-muted mb-2">Service Type</label>
-                                    <select className="w-full bg-primary-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors">
+                                    <label className="block text-xs font-medium text-text-muted mb-1">Service Type</label>
+                                    <select className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm">
                                         <option>Select a service...</option>
                                         <option>Event Security</option>
                                         <option>Corporate Security</option>
@@ -113,11 +113,11 @@ const Contact = () => {
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-text-muted mb-2">Message</label>
-                                    <textarea rows="4" className="w-full bg-primary-dark border border-white/10 rounded-md px-4 py-3 text-white focus:outline-none focus:border-accent-gold transition-colors" placeholder="How can we help you?"></textarea>
+                                    <label className="block text-xs font-medium text-text-muted mb-1">Message</label>
+                                    <textarea rows="3" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="How can we help you?"></textarea>
                                 </div>
 
-                                <Button type="submit" variant="primary" className="w-full">Send Message</Button>
+                                <Button type="submit" variant="primary" className="w-full py-2">Send Message</Button>
                             </form>
                         </motion.div>
                     </div>
@@ -126,7 +126,7 @@ const Contact = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6 }}
                         className="mt-20 h-96 bg-primary-light rounded-xl border border-white/5 flex items-center justify-center relative overflow-hidden"
                     >
