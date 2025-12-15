@@ -69,8 +69,8 @@ const Home = () => {
                         transition={{ duration: 0.8 }}
                         className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight"
                     >
-                        Professional Security <br />
-                        <span className="text-accent-gold">You Can Trust</span>
+                        Your Safety is <br />
+                        <span className="text-accent-gold">Our Number One Priority</span>
                     </motion.h1>
 
                     <motion.p
@@ -112,8 +112,8 @@ const Home = () => {
                         />
                         <FeatureCard
                             icon={Shield}
-                            title="Event Security"
-                            description="Specialized crowd control and VIP protection for events of all sizes."
+                            title="Personal Protection"
+                            description="Specialized personal security services for VIPs and individuals requiring heightened protection."
                             delay={0.2}
                         />
                         <FeatureCard
@@ -202,9 +202,9 @@ const Home = () => {
                             delay={0}
                         />
                         <ServicePreviewCard
-                            title="Event Security"
-                            description="Crowd management and safety protocols for concerts, meetings, and public gatherings."
-                            image="/Eventsecurity.jpeg"
+                            title="Personal Protection"
+                            description="Elite personal protection services for VIPs and high-profile individuals."
+                            image="/personal.jpeg"
                             delay={0.2}
                         />
                         <ServicePreviewCard

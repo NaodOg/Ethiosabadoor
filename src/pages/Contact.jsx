@@ -22,6 +22,7 @@ const Contact = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
+                            className="order-2 lg:order-1"
                         >
                             <h3 className="text-2xl font-serif font-bold text-white mb-8">Get in Touch</h3>
 
@@ -80,7 +81,7 @@ const Contact = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
-                            className="bg-primary-light p-8 rounded-xl border border-white/5"
+                            className="bg-primary-light p-8 rounded-xl border border-white/5 order-1 lg:order-2"
                         >
                             <h3 className="text-2xl font-serif font-bold text-white mb-4">Send a Message</h3>
                             <form className="space-y-4">
@@ -104,11 +105,11 @@ const Contact = () => {
                                     <label className="block text-xs font-medium text-text-muted mb-1">Service Type</label>
                                     <select className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm">
                                         <option>Select a service...</option>
-                                        <option>Event Security</option>
-                                        <option>Corporate Security</option>
                                         <option>Personal Bodyguard</option>
-                                        <option>Surveillance Equipment</option>
-                                        <option>Other</option>
+                                        <option>VIP Protection Team</option>
+                                        <option>Executive Protection</option>
+                                        <option>Family Protection</option>
+                                        <option>Travel Escort Protection</option>
                                     </select>
                                 </div>
 

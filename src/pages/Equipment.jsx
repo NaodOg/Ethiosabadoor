@@ -50,10 +50,10 @@ const Equipment = () => {
             imageClass: "w-full h-full object-contain p-2"
         },
         {
-            icon: Camera,
-            title: "Body Cameras",
-            description: "Wearable recording devices for guards to document patrols and incidents.",
-            image: "/bodycam.png"
+            icon: Scan,
+            title: "Smoke Detectors",
+            description: "Early fire detection systems to protect lives and property from fire hazards.",
+            image: "/smokedetector.jpg"
         },
         {
             icon: Radio,

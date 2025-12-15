@@ -26,14 +26,19 @@ const ServiceCard = ({ icon: Icon, title, description, index }) => (
 const Services = () => {
     const services = [
         {
+            icon: UserCheck,
+            title: "Executive Protection",
+            description: "Elite security services for business leaders and executives. Our experienced team provides comprehensive protection tailored to your specific needs and lifestyle."
+        },
+        {
             icon: Users,
-            title: "Event Security",
-            description: "Comprehensive crowd control and safety management for concerts, clubs, corporate meetings, and public gatherings. We ensure your event runs smoothly without disruption."
+            title: "Family Protection",
+            description: "Comprehensive security for families and their loved ones. We provide discrete protection services that allow your family to live comfortably while staying safeguarded."
         },
         {
             icon: Shield,
-            title: "Corporate Security",
-            description: "Protecting your business assets, employees, and sensitive information. Our guards are trained to maintain a professional presence suitable for office environments."
+            title: "Travel Escort Protection",
+            description: "Professional security escorts for domestic travel. We ensure your safety during transit and at destinations with comprehensive travel risk assessments."
         },
         {
             icon: UserCheck,
@@ -51,9 +56,22 @@ const Services = () => {
             description: "Flexible security solutions for one-time events, construction sites, or temporary requirements. Get professional protection exactly when you need it."
         },
         {
+            icon: null,
+            title: "",
+            description: "",
+            hidden: true
+        },
+        {
             icon: Star,
             title: "VIP Protocol Protection",
-            description: "Specialized services that adhere to strict protocols for high-profile clients, ensuring safety without compromising on etiquette or privacy."
+            description: "Specialized services that adhere to strict protocols for high-profile clients, ensuring safety without compromising on etiquette or privacy.",
+            isCentered: true
+        },
+        {
+            icon: null,
+            title: "",
+            description: "",
+            hidden: true
         }
     ];
 
@@ -68,9 +86,23 @@ const Services = () => {
             <section className="py-20">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service, index) => (
-                            <ServiceCard key={index} {...service} index={index} />
-                        ))}
+                        {services.map((service, index) => {
+                            if (service.hidden) {
+                                // Return empty grid cell to maintain layout
+                                return <div key={`empty-${index}`} className="opacity-0 pointer-events-none" style={{visibility: "hidden"}}></div>;
+                            }
+                            // Find the actual index among non-hidden items for the animation
+                            const visibleIndex = services.slice(0, index).filter(s => !s.hidden).length;
+
+                            // Special styling for VIP Protocol Protection to center it in the last row
+                            if (service.isCentered) {
+                                return <div key={index} className="lg:col-start-2 lg:col-span-1">
+                                    <ServiceCard {...service} index={visibleIndex} />
+                                </div>;
+                            }
+
+                            return <ServiceCard key={index} {...service} index={visibleIndex} />;
+                        })}
                     </div>
                 </div>
             </section>
