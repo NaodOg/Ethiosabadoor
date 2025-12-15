@@ -5,8 +5,9 @@ import { Shield, Users, Moon, Star, Calendar, UserCheck } from 'lucide-react';
 
 const ServiceCard = ({ icon: Icon, title, description, index }) => (
     <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
         whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
         className="bg-primary-light p-8 rounded-xl border border-white/5 relative overflow-hidden group"
