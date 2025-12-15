@@ -55,22 +55,22 @@ const Navbar = () => {
                         <img
                             src="/newlogo.png"
                             alt="Ethio Sabadoor Logo"
-                            className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+                            className="h-10 w-auto object-contain transition-transform group-hover:scale-105 xl:h-12"
                         />
                     </Link>
 
 
-                    <div className="hidden xl:flex items-center gap-6">
+                    <div className="hidden xl:flex items-center gap-4 md:gap-6">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`text-sm font-medium transition-colors hover:text-accent-gold ${location.pathname === link.path ? 'text-accent-gold' : 'text-text-muted'}`}
+                                className={`text-xs sm:text-sm font-medium transition-colors hover:text-accent-gold ${location.pathname === link.path ? 'text-accent-gold' : 'text-text-muted'}`}
                             >
                                 {link.name}
                             </Link>
                         ))}
-                        <Button to="/contact" variant="primary" className="px-4 py-2 text-sm">
+                        <Button to="/contact" variant="primary" className="px-3 py-1.5 text-xs sm:text-sm">
                             Get Quote
                         </Button>
                     </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
                         className="xl:hidden text-white hover:text-accent-gold transition-colors z-50 relative"
                         onClick={() => setIsOpen(!isOpen)}
                     >
-                        {isOpen ? <X size={28} /> : <Menu size={28} />}
+                        {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
             </div>
@@ -106,17 +106,17 @@ const Navbar = () => {
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
                             className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-primary-dark border-l border-white/10 z-40 xl:hidden shadow-2xl pt-24 px-6"
                         >
-                            <div className="flex flex-col gap-6">
+                            <div className="flex flex-col gap-4">
                                 {navLinks.map((link) => (
                                     <Link
                                         key={link.name}
                                         to={link.path}
-                                        className={`text-lg font-medium py-2 border-b border-white/5 ${location.pathname === link.path ? 'text-accent-gold' : 'text-text-muted'}`}
+                                        className={`text-base font-medium py-2 border-b border-white/5 ${location.pathname === link.path ? 'text-accent-gold' : 'text-text-muted'}`}
                                     >
                                         {link.name}
                                     </Link>
                                 ))}
-                                <Button to="/contact" variant="primary" className="w-full mt-4">
+                                <Button to="/contact" variant="primary" className="w-full mt-2 py-3 text-sm">
                                     Get Quote
                                 </Button>
                             </div>

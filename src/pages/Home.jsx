@@ -86,10 +86,10 @@ const Home = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="flex flex-col sm:flex-row gap-4 justify-center"
+                        className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-xs sm:max-w-max mx-auto"
                     >
-                        <Button to="/services" variant="primary">Request Security Service</Button>
-                        <Button to="/contact" variant="outline">Contact Us</Button>
+                        <Button to="/services" variant="primary" className="px-4 py-2 text-sm w-auto sm:w-auto sm:px-5 sm:py-2.5">Request Security Service</Button>
+                        <Button to="/contact" variant="outline" className="px-4 py-2 text-sm w-auto sm:w-auto sm:px-5 sm:py-2.5">Contact Us</Button>
                     </motion.div>
                 </div>
             </section>
@@ -164,7 +164,7 @@ const Home = () => {
                                 ))}
                             </div>
                             <div className="mt-10">
-                                <Button to="/about" variant="outline">Learn More About Us</Button>
+                                <Button to="/about" variant="outline" className="px-4 py-2 text-sm w-auto sm:px-6 sm:py-3">Learn More About Us</Button>
                             </div>
                         </motion.div>
 
@@ -216,7 +216,7 @@ const Home = () => {
                     </div>
 
                     <div className="text-center mt-12">
-                        <Button to="/services" variant="primary">View All Services</Button>
+                        <Button to="/services" variant="primary" className="px-4 py-2 text-sm w-auto sm:px-6 sm:py-3">View All Services</Button>
                     </div>
                 </div>
             </section>
