@@ -9,7 +9,7 @@ const Portfolio = () => {
     "/images/DSC00063.webp",
     "/images/DSC00102-Recovered.webp",
     "/images/DSC00132.webp",
-    "/images/DSC00144 (1).webp",
+    "/images/DSC00144-copy.webp",
     "/images/DSC00199.webp",
     "/images/DSC00219.webp",
     "/images/DSC00223.webp",
