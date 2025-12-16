@@ -84,38 +84,38 @@ const Contact = () => {
                             className="bg-primary-light p-8 rounded-xl border border-white/5 order-1 lg:order-2"
                         >
                             <h3 className="text-2xl font-serif font-bold text-white mb-4">Send a Message</h3>
-                            <form className="space-y-4">
+                            <form className="space-y-4" action="https://formspree.io/f/xzznlprl" method="POST">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
                                         <label className="block text-xs font-medium text-text-muted mb-1">Name</label>
-                                        <input type="text" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Name" />
+                                        <input type="text" name="name" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Name" required />
                                     </div>
                                     <div>
                                         <label className="block text-xs font-medium text-text-muted mb-1">Phone</label>
-                                        <input type="tel" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Phone" />
+                                        <input type="tel" name="phone" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Phone" />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-medium text-text-muted mb-1">Email</label>
-                                    <input type="email" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Email" />
+                                    <input type="email" name="email" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="Your Email" required />
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-medium text-text-muted mb-1">Service Type</label>
-                                    <select className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm">
-                                        <option>Select a service...</option>
-                                        <option>Personal Bodyguard</option>
-                                        <option>VIP Protection Team</option>
-                                        <option>Executive Protection</option>
-                                        <option>Family Protection</option>
-                                        <option>Travel Escort Protection</option>
+                                    <select name="service" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm">
+                                        <option value="">Select a service...</option>
+                                        <option value="Personal Bodyguard">Personal Bodyguard</option>
+                                        <option value="VIP Protection Team">VIP Protection Team</option>
+                                        <option value="Executive Protection">Executive Protection</option>
+                                        <option value="Family Protection">Family Protection</option>
+                                        <option value="Travel Escort Protection">Travel Escort Protection</option>
                                     </select>
                                 </div>
 
                                 <div>
                                     <label className="block text-xs font-medium text-text-muted mb-1">Message</label>
-                                    <textarea rows="3" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="How can we help you?"></textarea>
+                                    <textarea name="message" rows="3" className="w-full bg-primary-dark border border-white/10 rounded-md px-3 py-2 text-white focus:outline-none focus:border-accent-gold transition-colors text-sm" placeholder="How can we help you?" required></textarea>
                                 </div>
 
                                 <Button type="submit" variant="primary" className="w-full py-2">Send Message</Button>

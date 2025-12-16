@@ -10,11 +10,15 @@ const Footer = () => {
 
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
-                            <Shield className="w-8 h-8 text-accent-gold" />
-                            <div className="flex flex-col">
-                                <span className="text-xl font-serif font-bold text-white leading-none tracking-wide">ETHIO SABADOOR</span>
-                                <span className="text-[0.6rem] text-accent-gold uppercase tracking-widest">Security Services</span>
-                            </div>
+                            <img
+                                src="/newlogo.png"
+                                alt="Ethio Sabadoor Logo"
+                                className="h-10 w-auto object-contain"
+                            />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-xl font-serif font-bold text-white leading-none tracking-wide">ETHIO SABADOOR</span>
+                            <span className="text-[0.6rem] text-accent-gold uppercase tracking-widest">Security Services</span>
                         </div>
                         <p className="text-text-muted text-sm leading-relaxed">
                             Safeguarding your people, property, and peace of mind with trained professionals and modern surveillance solutions.
