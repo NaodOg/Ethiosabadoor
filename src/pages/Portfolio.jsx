@@ -2,34 +2,34 @@ import React, { useState } from 'react';
 import SectionTitle from '../components/SectionTitle';
 
 const Portfolio = () => {
-  // These are the images from your public/images folder:
+  // These are the compressed WebP versions of your images from the public/images folder:
   const displayImages = [
-    "/images/DSC00027.jpg",
-    "/images/DSC00043.jpg",
-    "/images/DSC00063.jpg",
-    "/images/DSC00102-Recovered.jpg",
-    "/images/DSC00132.jpg",
-    "/images/DSC00144.jpg",
-    "/images/DSC00199.jpg",
-    "/images/DSC00219.jpg",
-    "/images/DSC00223.jpg",
-    "/images/DSC00230.jpg",
-    "/images/DSC00254.jpg",
-    "/images/DSC04952.jpg",
-    "/images/IMG_4620.JPG",
-    "/images/IMG_4621.JPG",
-    "/images/IMG_4622.JPG",
-    "/images/IMG_4623.JPG",
-    "/images/IMG_5330.PNG",
-    "/images/IMG_5331.PNG",
-    "/images/IMG_5332.PNG",
-    "/images/IMG_5333.PNG",
-    "/images/IMG_5334.PNG",
-    "/images/IMG_5335.PNG",
-    "/images/IMG_5336.PNG",
-    "/images/IMG_5338.PNG",
-    "/images/IMG_5339.PNG",
-    "/images/IMG_5340.PNG"
+    "/images/DSC00027.webp",
+    "/images/DSC00043.webp",
+    "/images/DSC00063.webp",
+    "/images/DSC00102-Recovered.webp",
+    "/images/DSC00132.webp",
+    "/images/DSC00144.webp",
+    "/images/DSC00199.webp",
+    "/images/DSC00219.webp",
+    "/images/DSC00223.webp",
+    "/images/DSC00230.webp",
+    "/images/DSC00254.webp",
+    "/images/DSC04952.webp",
+    "/images/IMG_4620.webp",
+    "/images/IMG_4621.webp",
+    "/images/IMG_4622.webp",
+    "/images/IMG_4623.webp",
+    "/images/IMG_5330.webp",
+    "/images/IMG_5331.webp",
+    "/images/IMG_5332.webp",
+    "/images/IMG_5333.webp",
+    "/images/IMG_5334.webp",
+    "/images/IMG_5335.webp",
+    "/images/IMG_5336.webp",
+    "/images/IMG_5338.webp",
+    "/images/IMG_5339.webp",
+    "/images/IMG_5340.webp"
   ];
 
   return (
@@ -57,6 +57,8 @@ const Portfolio = () => {
                     src={image}
                     alt={`Portfolio item ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
