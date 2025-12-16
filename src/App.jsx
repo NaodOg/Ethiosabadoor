@@ -6,8 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Equipment from './pages/Equipment';
-
-
+import Portfolio from './pages/Portfolio';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 
@@ -36,6 +35,7 @@ function App() {
 
 
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

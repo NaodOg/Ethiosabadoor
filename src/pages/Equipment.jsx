@@ -71,7 +71,7 @@ const Equipment = () => {
             icon: Dog,
             title: "K9 Units",
             description: "Trained security dogs with tactical gear for detection and patrol support.",
-            image: "/k9unit.jpg"
+            image: "/k9new.jpg"
         }
     ];
 

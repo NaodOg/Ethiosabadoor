@@ -26,6 +26,16 @@ const ServiceCard = ({ icon: Icon, title, description, index }) => (
 const Services = () => {
     const services = [
         {
+            icon: Star,
+            title: "VIP Protocol Protection",
+            description: "Specialized services that adhere to strict protocols for high-profile clients, ensuring safety without compromising on etiquette or privacy."
+        },
+        {
+            icon: UserCheck,
+            title: "Personal Bodyguards",
+            description: "Elite protection for VIPs, executives, and individuals requiring heightened security. Our bodyguards are discrete, highly trained, and vigilant."
+        },
+        {
             icon: UserCheck,
             title: "Executive Protection",
             description: "Elite security services for business leaders and executives. Our experienced team provides comprehensive protection tailored to your specific needs and lifestyle."
@@ -41,37 +51,20 @@ const Services = () => {
             description: "Professional security escorts for domestic travel. We ensure your safety during transit and at destinations with comprehensive travel risk assessments."
         },
         {
-            icon: UserCheck,
-            title: "Personal Bodyguards",
-            description: "Elite protection for VIPs, executives, and individuals requiring heightened security. Our bodyguards are discreet, highly trained, and vigilant."
-        },
-        {
             icon: Moon,
             title: "Emergency & Overnight",
             description: "Rapid response teams and overnight patrols to secure your property during vulnerable hours. We provide peace of mind while you sleep."
         },
         {
+            icon: null,
+            title: "",
+            description: "",
+            hidden: true
+        },
+        {
             icon: Calendar,
             title: "Short-term Security",
             description: "Flexible security solutions for one-time events, construction sites, or temporary requirements. Get professional protection exactly when you need it."
-        },
-        {
-            icon: null,
-            title: "",
-            description: "",
-            hidden: true
-        },
-        {
-            icon: Star,
-            title: "VIP Protocol Protection",
-            description: "Specialized services that adhere to strict protocols for high-profile clients, ensuring safety without compromising on etiquette or privacy.",
-            isCentered: true
-        },
-        {
-            icon: null,
-            title: "",
-            description: "",
-            hidden: true
         }
     ];
 
@@ -93,13 +86,6 @@ const Services = () => {
                             }
                             // Find the actual index among non-hidden items for the animation
                             const visibleIndex = services.slice(0, index).filter(s => !s.hidden).length;
-
-                            // Special styling for VIP Protocol Protection to center it in the last row
-                            if (service.isCentered) {
-                                return <div key={index} className="lg:col-start-2 lg:col-span-1">
-                                    <ServiceCard {...service} index={visibleIndex} />
-                                </div>;
-                            }
 
                             return <ServiceCard key={index} {...service} index={visibleIndex} />;
                         })}

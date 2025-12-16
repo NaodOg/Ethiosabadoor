@@ -42,11 +42,11 @@ const Footer = () => {
                     <div>
                         <h3 className="text-white font-serif font-bold mb-6">Our Services</h3>
                         <ul className="space-y-3">
-                            <li className="text-text-muted text-sm">Event Security</li>
-                            <li className="text-text-muted text-sm">Corporate Protection</li>
+                            <li className="text-text-muted text-sm">VIP Protocol Protection</li>
                             <li className="text-text-muted text-sm">Personal Bodyguards</li>
-                            <li className="text-text-muted text-sm">CCTV Installation</li>
-                            <li className="text-text-muted text-sm">Emergency Response</li>
+                            <li className="text-text-muted text-sm">Travel Escort Protection</li>
+                            <li className="text-text-muted text-sm">Family Protection</li>
+                            <li className="text-text-muted text-sm">Emergency & Overnight</li>
                         </ul>
                     </div>
 
