@@ -24,22 +24,18 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-primary-dark text-text font-sans">
-        <Navbar />
+      <div className="flex flex-col min-h-screen bg-white text-black font-sans">
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Error404 />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/equipment" element={<Equipment />} />
-
-
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <Footer />
       </div>
     </Router>
   );
